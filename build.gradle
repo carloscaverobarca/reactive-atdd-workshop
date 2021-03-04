@@ -34,7 +34,7 @@ jacocoTestReport {
 sonarqube {
   properties {
     property 'sonar.host.url', 'https://sonarcloud.io'
-    property 'sonar.organization', 'thoughtworks'
+    property 'sonar.organization', 'thoughtworks-testing'
     property 'sonar.projectKey', 'reactive-atdd-workshop'
     property 'sonar.moduleKey', 'com.thoughtworks:reactive-atdd-workshop'
   }
