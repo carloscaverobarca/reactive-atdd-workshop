@@ -2,9 +2,13 @@ name: Build
 
 on:
   push:
-    branches: [ main ]
+    branches: [ master ]
+    paths:
+      - 'src/**'
+      - 'build.gradle'
+      - README.md
   pull_request:
-    branches: [ main ]
+    branches: [ master ]
 
 jobs:
   build:
