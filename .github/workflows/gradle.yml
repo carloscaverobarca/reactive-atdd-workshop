@@ -21,6 +21,10 @@ jobs:
       run: chmod +x gradlew
     - name: Build with Gradle, leveraging on Makefile
       run: make test
+    - name: SonarCloud Scan
+      uses: sonarsource/sonarcloud-github-action@master
+      env:
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
     - name: Container tests
       run: |
         make container-start
