@@ -6,6 +6,12 @@ build:
 test:
 	@./gradlew clean test
 
+jacoco:
+    @./gradlew jacocoTestReport
+
+sonar:
+    @./gradlew sonarqube --info
+
 run:
 	@./gradlew bootRun
 
