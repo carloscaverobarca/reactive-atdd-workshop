@@ -7,10 +7,10 @@ test:
 	@./gradlew clean test
 
 jacoco:
-    @./gradlew jacocoTestReport
+	@./gradlew jacocoTestReport
 
 sonar:
-    @./gradlew sonarqube --info
+	@./gradlew sonarqube --info
 
 run:
 	@./gradlew bootRun
