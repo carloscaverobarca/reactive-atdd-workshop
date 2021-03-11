@@ -42,10 +42,10 @@ jobs:
         credentials: ${{ secrets.GKE_SA_KEY }}
 
     - name: Package Jar
-      run: make build
+      run: make bootJar
 
     # Build the Docker image
-    - name: Build
+    - name: Build Image
       run: |-
         docker build \
           --tag "gcr.io/$PROJECT_ID/$IMAGE:$GITHUB_SHA" \
@@ -54,7 +54,7 @@ jobs:
           .
 
     # Push the Docker image to Google Container Registry
-    - name: Publish
+    - name: Publish Image
       run: |-
         docker push "gcr.io/$PROJECT_ID/$IMAGE:$GITHUB_SHA"
 

@@ -18,6 +18,9 @@ run:
 clean:
 	@./gradlew clean
 
+bootJar:
+	@./gradlew clean bootJar
+
 container-start:
 	@./gradlew clean bootJar
 	@docker-compose -f docker-compose.yml up -d --remove-orphans --build
