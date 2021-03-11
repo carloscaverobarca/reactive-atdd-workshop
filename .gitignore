@@ -28,6 +28,9 @@ hs_err_pid*
 # Local .terraform directories
 **/.terraform/*
 
+# Lock files
+.terraform.lock*
+
 # .tfstate files
 *.tfstate
 *.tfstate.*
